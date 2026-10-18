@@ -1,0 +1,46 @@
+name: Asset submission
+description: Propose a transition, SFX, music track, template or preset for the starter pack or catalog
+labels: [asset]
+body:
+  - type: input
+    id: id
+    attributes:
+      label: Proposed asset ID
+      placeholder: spearfia/whip-pan@0.1.0
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind
+      options: [transition, sfx, music, template, preset, effect, recipe]
+    validations:
+      required: true
+  - type: input
+    id: license
+    attributes:
+      label: License (SPDX)
+      placeholder: CC0-1.0
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: Where it comes from, and who made it.
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: What is it for?
+      description: One or two sentences an AI could use to decide when to pick it.
+    validations:
+      required: true
+  - type: checkboxes
+    id: rights
+    attributes:
+      label: Rights
+      options:
+        - label: I made this asset, or its license allows redistribution in this repo.
+          required: true

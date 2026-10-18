@@ -1,0 +1,37 @@
+# .github
+
+Org profile and default community files for Spear Fia.
+
+## Layout
+
+- `profile/README.md`: the org landing page on github.com/spearfia.
+- `CODE_OF_CONDUCT.md`, `SECURITY.md`: defaults for every repo in the org.
+- `ISSUE_TEMPLATE/`: bug report, feature request, asset submission.
+- `PULL_REQUEST_TEMPLATE.md`: default PR template.
+
+## Commands
+
+```powershell
+npx markdownlint-cli2 "**/*.md"
+```
+
+## Naming
+
+| Context | Form |
+| --- | --- |
+| Prose, UI, README titles | Spear Fia |
+| GitHub org, URLs, crates, packages, IDs | `spearfia` |
+| Rust crates | `spearfia-<name>` |
+| npm packages | `@spearfia/<name>` |
+| Asset and plugin IDs | `spearfia/<asset>@<semver>`, e.g. `spearfia/focus-loupe@0.1.0` |
+| Schema IDs | `https://spearfia.dev/schemas/<name>/v1.json` |
+
+Never write the second word of the name in all capitals.
+
+## Rules
+
+- Never commit media. Media lives on the external drive, not under `C:\dev`.
+- The schemas in `spearfia/spearfia-spec` are the source of truth for every format.
+  Change the schema there first, then the code or data that uses it.
+- `main` is protected: work on `feat/`, `fix/` or `exp/` branches and open a PR.
+- New files are dual licensed MIT OR Apache-2.0.
